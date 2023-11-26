@@ -134,8 +134,9 @@ Now, your theme is ready to be deployed. All generated files are located at `out
 ### Deploy to Netlify
 
 Clone this repository on own GitHub account and deploy to Netlify:
+https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://github.com/Br0wnZ/NextJS-Landing-Page-Template)
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Br0wnZ/Coto-Photo-Landing.git)
 
 ### Deploy to Vercel
 
