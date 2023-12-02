@@ -24,8 +24,8 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     'flex-wrap',
     'items-center',
     'hover:cursor-pointer',
+    'transform transition duration-300',
     'hover:scale-105',
-    'transition duration-150 ease-in-out',
     {
       'flex-row-reverse': props.reverse,
     },
