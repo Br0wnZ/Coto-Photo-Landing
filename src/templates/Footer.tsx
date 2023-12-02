@@ -29,11 +29,11 @@ const Footer = () => (
                 viewBox="0 0 37.195 37.195"
                 stroke="#a0aec0"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
                   {' '}
@@ -58,11 +58,11 @@ const Footer = () => (
                 xmlns="http://www.w3.org/2000/svg"
                 fill="#a0aec0"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
                   {' '}
@@ -71,9 +71,9 @@ const Footer = () => (
                   <g
                     id="Page-1"
                     stroke="none"
-                    stroke-width="1"
+                    strokeWidth="1"
                     fill="none"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   >
                     {' '}
                     <g
@@ -112,11 +112,11 @@ const Footer = () => (
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="-143 145 512 512"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
                   {' '}
@@ -137,7 +137,7 @@ const Footer = () => (
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/">Contacto</Link>
+          <Link href="/about">Contacto</Link>
         </li>
         {/* <li>
           <Link href="/">Docs</Link>
