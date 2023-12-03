@@ -4,5 +4,5 @@ export type VerticalFeatureRowProps = {
   image: string;
   imageAlt: string;
   reverse?: boolean;
-  link?: string;
+  link: string;
 };

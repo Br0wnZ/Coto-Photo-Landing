@@ -19,6 +19,7 @@ const VerticalFeatures = () => {
           image={feature.image}
           imageAlt={feature.imageAlt}
           reverse={i % 2 !== 0}
+          link={feature.link || ''}
         />
       ))}
     </Section>
