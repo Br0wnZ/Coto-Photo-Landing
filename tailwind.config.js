@@ -16,6 +16,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('../../public/assets/images/header.png')",
+        'tools-img': "url('../../public/assets/images/tools.avif')",
       },
       colors: {
         primary: {
