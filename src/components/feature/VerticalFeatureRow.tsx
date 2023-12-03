@@ -5,17 +5,9 @@ import type { RefObject } from 'react';
 import { useRef } from 'react';
 
 import { useIsVisible } from '@/hooks/useIsVisible';
+import type { VerticalFeatureRowProps } from '@/models/vertical-feature.model';
 
-type IVerticalFeatureRowProps = {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-  reverse?: boolean;
-  link?: string;
-};
-
-const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
+const VerticalFeatureRow = (props: VerticalFeatureRowProps) => {
   const ref: RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
   const isVisible = useIsVisible(ref);
   const verticalFeatureClass = className(
