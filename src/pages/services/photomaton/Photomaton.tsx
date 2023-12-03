@@ -1,13 +1,24 @@
 import React from 'react';
 
+import { Carousel } from '@/components/carousel/Carousel';
+import type { ImageItem } from '@/models/image.model';
+
 const PhotoboothSection = () => {
+  const slides: ImageItem[] = Array.from({ length: 5 }).map((_, i) => ({
+    image: `https://picsum.photos/200/300?random=${i}.webp`,
+    alt: 'alt',
+    title: 'title',
+    description: 'description',
+  }));
   return (
     <div className="bg-gray-100 px-4 py-8 lg:px-16 xl:px-32">
       <h2 className="mb-8 text-4xl font-bold text-gray-800">
         Añade diversión con nuestro fotomatón
       </h2>
 
-      <p className="mb-6 leading-relaxed text-gray-600">
+      <Carousel slides={slides} />
+
+      <p className="my-6 leading-relaxed text-gray-600">
         ¡Haz que tu boda sea aún más inolvidable! Con nuestro fotomatón de
         última generación, la diversión está garantizada para todos. Desde los
         jóvenes hasta los más mayores, todos disfrutarán de momentos llenos de
