@@ -35,6 +35,7 @@ const Carousel = ({ slides }: { slides: ImageItem[] }) => {
         <div className="relative">
           {slides.map((image, index) => (
             <img
+              loading="lazy"
               key={index}
               src={image.image}
               alt={`Slide ${index + 1}`}

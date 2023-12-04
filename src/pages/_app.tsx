@@ -11,6 +11,7 @@ import { AppConfig } from '@/utils/AppConfig';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const { services } = router.query;
+
   return (
     <div className="text-gray-600 antialiased">
       <Meta title={AppConfig.title} description={AppConfig.description} />
