@@ -15,13 +15,14 @@ const Hero = (props: IHeroProps) => (
         <NavbarTwoColumns logo={<Logo xl />}></NavbarTwoColumns>
       </Section>
       {props.showSection && (
-        <Section yPadding="pt-16 pb-32">
+        <Section yPadding="py-2 md:pt-16 md:pb-32">
           <HeroOneButton
             title={
               <>
                 {
                   'Gracias a nuestros servicios podrás dar un toque divertido y original a tu evento\n'
                 }
+                <br />
                 <span className="text-primary-500 md:text-2xl">
                   Bodas, bautizos, comuniones y eventos.
                 </span>
