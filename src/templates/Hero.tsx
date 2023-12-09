@@ -10,7 +10,7 @@ type IHeroProps = {
 
 const Hero = (props: IHeroProps) => (
   <Background color="bg-white/30 bg-tools-img bg-cover bg-center backdrop-filter backdrop-blur">
-    <div className="backdrop-blur-sm">
+    <div id="top" className="backdrop-blur-sm">
       <Section yPadding="py-6">
         <NavbarTwoColumns logo={<Logo xl />}></NavbarTwoColumns>
       </Section>

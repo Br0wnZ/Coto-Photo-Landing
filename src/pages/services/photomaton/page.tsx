@@ -3,7 +3,7 @@ import React from 'react';
 import { Carousel } from '@/components/carousel/Carousel';
 import type { ImageItem } from '@/models/image.model';
 
-const PhotoboothSection = () => {
+const PhotoboothPage = () => {
   const slides: ImageItem[] = Array.from({ length: 5 }).map((_, i) => ({
     image: `https://picsum.photos/200/300?random=${i}.webp`,
     alt: 'alt',
@@ -66,4 +66,4 @@ const PhotoboothSection = () => {
   );
 };
 
-export default PhotoboothSection;
+export default PhotoboothPage;

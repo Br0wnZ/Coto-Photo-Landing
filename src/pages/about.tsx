@@ -20,14 +20,14 @@ const About = () => (
               </h3>
               <p className="mb-2 text-gray-600">
                 <span className="font-semibold">Correo Electrónico:</span>{' '}
-                info@tuempresa.com
+                cotomoreno7@gmail.com
               </p>
               <p className="mb-2 text-gray-600">
-                <span className="font-semibold">Teléfono:</span> +123 456 789
+                <span className="font-semibold">Teléfono:</span> 665422051
               </p>
               <p className="mb-2 text-gray-600">
-                <span className="font-semibold">Dirección:</span> Calle
-                Principal, Ciudad
+                <span className="font-semibold">Dirección:</span> Calle Rábida,
+                Villalba del Alcor, Huelva
               </p>
             </div>
 

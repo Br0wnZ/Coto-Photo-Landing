@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 
 import AudioGuestbookPage from './audio-guestbook/page';
-import PhotoboothSection from './photomaton/Photomaton';
-import PrePostServiceSection from './pre-post/PrePost';
-import Video360Section from './video-360/Video360';
+import PhotoboothPage from './photomaton/page';
+import PrePostServicePage from './pre-post/page';
+import Video360Page from './video-360/page';
 
 const Services = () => {
   const router = useRouter();
@@ -14,11 +14,11 @@ const Services = () => {
       case 'AudioGuestbook':
         return <AudioGuestbookPage />;
       case 'Video360':
-        return <Video360Section />;
+        return <Video360Page />;
       case 'Photocall':
-        return <PhotoboothSection />;
+        return <PhotoboothPage />;
       case 'PrePost':
-        return <PrePostServiceSection />;
+        return <PrePostServicePage />;
       default:
         return 'foo';
     }
