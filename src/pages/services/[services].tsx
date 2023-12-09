@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import AudioGuestbookSection from './audio-guestbook/AudioGuestbook';
+import AudioGuestbookPage from './audio-guestbook/page';
 import PhotoboothSection from './photomaton/Photomaton';
 import PrePostServiceSection from './pre-post/PrePost';
 import Video360Section from './video-360/Video360';
@@ -12,7 +12,7 @@ const Services = () => {
   const renderSwitch = () => {
     switch (services) {
       case 'AudioGuestbook':
-        return <AudioGuestbookSection />;
+        return <AudioGuestbookPage />;
       case 'Video360':
         return <Video360Section />;
       case 'Photocall':

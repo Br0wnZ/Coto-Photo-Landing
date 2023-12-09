@@ -1,4 +1,4 @@
-const AudioGuestbookSection = () => {
+const AudioGuestbookPage = () => {
   return (
     <div className="bg-gray-100 px-4 py-8 lg:px-16 xl:px-32">
       <h2 className="mb-6 text-3xl font-bold text-gray-800">
@@ -58,4 +58,4 @@ const AudioGuestbookSection = () => {
   );
 };
 
-export default AudioGuestbookSection;
+export default AudioGuestbookPage;
