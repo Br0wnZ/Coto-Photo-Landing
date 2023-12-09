@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PrePostServiceSection = () => {
+const PrePostServicePage = () => {
   return (
     <div className="bg-gray-100 px-4 py-8 lg:px-16 xl:px-32">
       <h2 className="mb-8 text-4xl font-bold text-gray-800">
@@ -55,4 +55,4 @@ const PrePostServiceSection = () => {
   );
 };
 
-export default PrePostServiceSection;
+export default PrePostServicePage;

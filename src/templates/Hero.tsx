@@ -10,12 +10,12 @@ type IHeroProps = {
 
 const Hero = (props: IHeroProps) => (
   <Background color="bg-white/30 bg-tools-img bg-cover bg-center backdrop-filter backdrop-blur">
-    <div className="backdrop-blur-sm">
+    <div id="top" className="backdrop-blur-sm">
       <Section yPadding="py-6">
         <NavbarTwoColumns logo={<Logo xl />}></NavbarTwoColumns>
       </Section>
       {props.showSection && (
-        <Section yPadding="py-2 md:pt-16 md:pb-32">
+        <Section yPadding="py-2">
           <HeroOneButton
             title={
               <>
@@ -23,7 +23,7 @@ const Hero = (props: IHeroProps) => (
                   'Gracias a nuestros servicios podrás dar un toque divertido y original a tu evento\n'
                 }
                 <br />
-                <span className="text-primary-500 md:text-2xl">
+                <span className="text-[#adbdff] md:text-2xl">
                   Bodas, bautizos, comuniones y eventos.
                 </span>
               </>
