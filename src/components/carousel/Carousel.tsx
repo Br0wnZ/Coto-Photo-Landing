@@ -39,7 +39,7 @@ const Carousel = ({ slides }: { slides: ImageItem[] }) => {
               key={index}
               src={image.image}
               alt={`Slide ${index + 1}`}
-              className={`absolute left-0 top-0 h-auto w-full transition-opacity duration-500 ${
+              className={`absolute left-0 top-0 h-auto w-full object-scale-down transition-opacity duration-500 ${
                 index === currentImageIndex ? 'opacity-100' : 'opacity-0'
               }`}
             />

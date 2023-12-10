@@ -4,19 +4,49 @@ import { Carousel } from '@/components/carousel/Carousel';
 import type { ImageItem } from '@/models/image.model';
 
 const PhotoboothPage = () => {
-  const slides: ImageItem[] = Array.from({ length: 5 }).map((_, i) => ({
-    image: `https://picsum.photos/200/300?random=${i}.webp`,
-    alt: 'alt',
-    title: 'title',
-    description: 'description',
-  }));
+  // const slides: ImageItem[] = Array.from({ length: 5 }).map((_, i) => ({
+  //   image: `https://picsum.photos/200/300?random=${i}.webp`,
+  //   alt: 'alt',
+  //   title: 'title',
+  //   description: 'description',
+  // }));
+  const slides2: ImageItem[] = [
+    {
+      image:
+        'https://www.funidelia.es/blog/wp-content/uploads/2015/03/portada-photocall.jpeg',
+      alt: 'alt',
+      title: 'title',
+      description: 'description',
+    },
+    {
+      image:
+        'https://partfy.s3.eu-south-2.amazonaws.com/frontend/files/inspiracion/fotomatoncumplejpg.jpg',
+      alt: 'alt',
+      title: 'title',
+      description: 'description',
+    },
+    {
+      image:
+        'https://cdn0.bodas.net/vendor/21561/3_2/960/jpg/2019-05-18-193637-128_1_121561-1558386400.jpeg',
+      alt: 'alt',
+      title: 'title',
+      description: 'description',
+    },
+    {
+      image:
+        'https://cdn0.bodas.net/vendor/21561/3_2/960/jpg/2019-05-18-205800-46_1_121561-1558386419.jpeg',
+      alt: 'alt',
+      title: 'title',
+      description: 'description',
+    },
+  ];
   return (
     <div className="bg-gray-100 px-4 py-8 lg:px-16 xl:px-32">
       <h2 className="mb-8 text-4xl font-bold text-gray-800">
         Añade diversión con nuestro fotomatón
       </h2>
 
-      <Carousel slides={slides} />
+      <Carousel slides={slides2} />
 
       <p className="my-6 leading-relaxed text-gray-600">
         ¡Haz que tu boda sea aún más inolvidable! Con nuestro fotomatón de
