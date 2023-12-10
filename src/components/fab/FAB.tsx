@@ -1,8 +1,15 @@
 import Link from 'next/link';
 
-export const FAB = () => {
+type IFABProps = {
+  isMobile?: boolean;
+};
+
+export const FAB = ({ isMobile }: IFABProps) => {
   return (
-    <Link href="/about">
+    <Link
+      href={isMobile ? 'https://wa.me/665422051' : '/about'}
+      target={isMobile ? '_blank' : ''}
+    >
       <div className="fixed bottom-4 right-4 block">
         <button className="rounded-full bg-[#0099ff] p-4 font-bold text-white hover:bg-blue-700">
           <svg
