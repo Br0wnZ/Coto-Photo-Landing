@@ -1,5 +1,4 @@
 import className from 'classnames';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import type { RefObject } from 'react';
 import { useRef } from 'react';
@@ -44,7 +43,7 @@ const VerticalFeatureRow = (props: VerticalFeatureRowProps) => {
       </div>
 
       <div className="w-full p-6 sm:w-1/2">
-        <Image
+        <img
           src={`${router.basePath}${props.image}`}
           alt={props.imageAlt}
           width="0"
