@@ -1,5 +1,6 @@
 import '../styles/global.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 
@@ -22,6 +23,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Hero showSection={!services} />
       <Component {...pageProps} />
+      <Analytics />
       <Footer />
       {router.pathname !== '/about' && (
         <FAB isMobile={Boolean(width && width < 768)} />

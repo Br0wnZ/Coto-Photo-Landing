@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/react';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 import { AppConfig } from '../utils/AppConfig';
@@ -13,7 +12,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <Analytics />
         </body>
       </Html>
     );
