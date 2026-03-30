@@ -38,7 +38,7 @@ const About = () => (
 
             <div className="mb-6 w-full px-4 md:w-1/2">
               <img
-                src="/assets/images/logo.png"
+                src="/assets/images/logo26-2.png"
                 alt=""
                 className="md:ms-auto md:w-2/3"
               />
