@@ -16,6 +16,7 @@ const Meta = (props: IMetaProps) => {
   return (
     <>
       <Head>
+        <title>Coto Photo</title>
         <meta charSet="UTF-8" key="charset" />
         <meta
           name="viewport"
@@ -30,21 +31,8 @@ const Meta = (props: IMetaProps) => {
         <link
           rel="icon"
           type="image/png"
-          sizes="32x32"
-          href={`${router.basePath}/favicon-32x32.png`}
-          key="icon32"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href={`${router.basePath}/favicon-16x16.png`}
-          key="icon16"
-        />
-        <link
-          rel="icon"
-          href={`${router.basePath}/favicon.ico`}
-          key="favicon"
+          href="/assets/images/logo26-2.png"
+          key="custom-favicon"
         />
       </Head>
       <NextSeo
