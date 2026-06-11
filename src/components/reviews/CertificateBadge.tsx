@@ -7,7 +7,7 @@ type CertificateBadgeProps = {
 };
 
 const CertificateBadge = ({ certificate }: CertificateBadgeProps) => {
-  const { title, year, issuer, description } = certificate;
+  const { title, year, description } = certificate;
 
   const isWeddingAward = title.toLowerCase().includes('award');
 
@@ -16,19 +16,21 @@ const CertificateBadge = ({ certificate }: CertificateBadgeProps) => {
   // - Warm taupe theme for the Recommended badge matching the widget brand.
   const themeColor = isWeddingAward ? '#B59A57' : '#A69688';
   const topLabel = isWeddingAward ? 'WEDDING AWARD' : 'RECOMENDADO';
-  const bottomLabel = isWeddingAward ? `GANADOR ${year}` : `${certificate.opinionsCount ?? 4} OPINIONES`;
+  const bottomLabel = isWeddingAward
+    ? `GANADOR ${year}`
+    : `${certificate.opinionsCount ?? 4} OPINIONES`;
 
   return (
     <div className="group relative flex flex-col items-center justify-between overflow-hidden rounded-2xl border border-amber-100 bg-gradient-to-b from-amber-50/60 to-white p-6 text-center shadow-md transition-all duration-300 hover:scale-[1.03] hover:border-amber-300 hover:shadow-xl">
       {/* Light glow background decoration */}
-      <div className="absolute -right-12 -top-12 h-24 w-24 rounded-full bg-amber-100/40 blur-2xl group-hover:bg-amber-200/50 transition-all duration-300"></div>
+      <div className="absolute -right-12 -top-12 h-24 w-24 rounded-full bg-amber-100/40 blur-2xl transition-all duration-300 group-hover:bg-amber-200/50"></div>
 
-      <div className="flex flex-col items-center w-full">
+      <div className="flex w-full flex-col items-center">
         {/* Uniform Badge Design matching the bodas.net widget style */}
-        <div className="flex flex-col items-center w-full pb-1">
+        <div className="flex w-full flex-col items-center pb-1">
           {/* Outline Heart Icon (hand-drawn style) */}
           <svg
-            className="h-16 w-16 mb-2 transition-transform duration-300 group-hover:scale-110"
+            className="mb-2 h-16 w-16 transition-transform duration-300 group-hover:scale-110"
             fill="none"
             stroke={themeColor}
             strokeWidth="3"
@@ -41,21 +43,17 @@ const CertificateBadge = ({ certificate }: CertificateBadgeProps) => {
           </svg>
 
           {/* Top Label (WEDDING AWARD or RECOMENDADO) */}
-          <span 
-            className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#4A4A4A] mb-1 font-sans"
-          >
+          <span className="mb-1 font-sans text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#4A4A4A]">
             {topLabel}
           </span>
 
           {/* bodas.net Brand Script/Serif Text */}
-          <span 
-            className="font-serif italic text-4xl font-normal text-[#2F3438] mb-2.5 select-none leading-none tracking-tight"
-          >
+          <span className="mb-2.5 select-none font-serif text-4xl font-normal italic leading-none tracking-tight text-[#2F3438]">
             bodas.net
           </span>
 
           {/* 5 Yellow Stars */}
-          <div className="flex gap-1 mb-2">
+          <div className="mb-2 flex gap-1">
             {[...Array(5)].map((_, i) => (
               <svg
                 key={i}
@@ -69,8 +67,8 @@ const CertificateBadge = ({ certificate }: CertificateBadgeProps) => {
           </div>
 
           {/* Bottom Label (GANADOR {year} or {opinions} OPINIONES) */}
-          <span 
-            className="text-[11px] font-bold uppercase tracking-[0.15em] mb-2"
+          <span
+            className="mb-2 text-[11px] font-bold uppercase tracking-[0.15em]"
             style={{ color: themeColor }}
           >
             {bottomLabel}
@@ -79,7 +77,7 @@ const CertificateBadge = ({ certificate }: CertificateBadgeProps) => {
 
         {/* Description */}
         {description && (
-          <p className="mt-3 text-xs leading-relaxed text-gray-500 px-2 border-t border-amber-100/40 pt-3 w-full">
+          <p className="mt-3 w-full border-t border-amber-100/40 px-2 pt-3 text-xs leading-relaxed text-gray-500">
             {description}
           </p>
         )}

@@ -7,4 +7,3 @@ export interface ICertificate {
   badgeUrl?: string; // Optional if we use custom rendering
   opinionsCount?: number;
 }
-

@@ -1,6 +1,11 @@
-import React, { useEffect, useRef, useState, type ReactNode } from 'react';
+import React, { type ReactNode, useEffect, useRef, useState } from 'react';
 
-type AnimationType = 'fade-up' | 'fade-in' | 'slide-left' | 'slide-right' | 'scale-up';
+type AnimationType =
+  | 'fade-up'
+  | 'fade-in'
+  | 'slide-left'
+  | 'slide-right'
+  | 'scale-up';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -24,8 +29,9 @@ export const ScrollReveal = ({
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting) {
           setIsIntersecting(true);
           if (once && ref.current) {
             observer.unobserve(ref.current);
@@ -37,7 +43,7 @@ export const ScrollReveal = ({
       {
         threshold,
         rootMargin: '0px 0px -50px 0px', // triggers slightly before entering view
-      }
+      },
     );
 
     if (ref.current) {
@@ -99,7 +105,11 @@ export const ScrollReveal = ({
         willChange: 'transform, opacity',
       }}
     >
-      <div className={`transition-all ease-out duration-[inherit] delay-[inherit] ${isIntersecting ? active : base}`}>
+      <div
+        className={`transition-all delay-[inherit] duration-[inherit] ease-out ${
+          isIntersecting ? active : base
+        }`}
+      >
         {children}
       </div>
     </div>

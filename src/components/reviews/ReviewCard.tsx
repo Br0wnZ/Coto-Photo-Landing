@@ -31,14 +31,14 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
 
         {/* Title */}
         {title && (
-          <h4 className="mb-2 text-lg font-bold text-gray-800 line-clamp-1 group-hover:text-indigo-600 transition-colors duration-300">
+          <h4 className="mb-2 line-clamp-1 text-lg font-bold text-gray-800 transition-colors duration-300 group-hover:text-indigo-600">
             {title}
           </h4>
         )}
 
         {/* Quote Comment */}
         <p className="relative mb-6 text-sm italic leading-relaxed text-gray-600">
-          <span className="absolute -left-2 -top-2 select-none text-4xl text-indigo-100 font-serif">
+          <span className="absolute -left-2 -top-2 select-none font-serif text-4xl text-indigo-100">
             “
           </span>
           <span className="relative z-10">{comment}</span>
@@ -46,7 +46,7 @@ const ReviewCard = ({ review }: ReviewCardProps) => {
       </div>
 
       {/* Author and Date */}
-      <div className="mt-auto border-t border-gray-100 pt-4 flex items-center justify-between">
+      <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
         <div>
           <p className="text-sm font-semibold text-gray-900">{author}</p>
           <p className="text-xs text-gray-400">{date}</p>
