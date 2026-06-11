@@ -7,7 +7,7 @@ const VerticalFeatures = () => {
   return (
     <Section
       title="¡Porque elegirnos es una opción ideal para los invitados!"
-      description="Con el alquiler podrás tener un recuerdo muy divertido para toda la vida.
+      description="Gracias a nuestros servicios podrás dar un toque divertido y original a tu evento.
     Sin duda es una opción genial de hacer pasarlo bien a los invitados y que estén entretenidos."
     >
       <hr />

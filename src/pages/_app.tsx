@@ -16,16 +16,17 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
   const { services } = router.query;
   const { width } = useWindowDimensions();
+  const isDossier = router.pathname === '/dosier';
 
   ScrollToTopControlller();
   return (
     <div className="text-gray-600 antialiased">
       <Meta title={AppConfig.title} description={AppConfig.description} />
-      <Hero showSection={!services} />
+      {!isDossier && <Hero showSection={!services} />}
       <Component {...pageProps} />
       <Analytics />
-      <Footer />
-      {router.pathname !== '/about' && (
+      {!isDossier && <Footer />}
+      {!isDossier && router.pathname !== '/about' && (
         <FAB isMobile={Boolean(width && width < 768)} />
       )}
     </div>
