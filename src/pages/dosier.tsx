@@ -1,16 +1,16 @@
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
 
-import { ScrollReveal } from "@/components/feature/ScrollReveal";
-import { Meta } from "@/layout/Meta";
+import { ScrollReveal } from '@/components/feature/ScrollReveal';
+import { Meta } from '@/layout/Meta';
 
 export default function Dosier() {
   const router = useRouter();
 
   // Calculator State
-  const [fotomatonHrs, setFotomatonHrs] = useState<string>("none");
-  const [video360Hrs, setVideo360Hrs] = useState<string>("none");
-  const [vogueOption, setVogueOption] = useState<string>("none");
+  const [fotomatonHrs, setFotomatonHrs] = useState<string>('none');
+  const [video360Hrs, setVideo360Hrs] = useState<string>('none');
+  const [vogueOption, setVogueOption] = useState<string>('none');
   const [audioGuestbook, setAudioGuestbook] = useState<boolean>(false);
   const [prePost, setPrePost] = useState<boolean>(false);
   const [neonExtra, setNeonExtra] = useState<boolean>(false);
@@ -19,15 +19,15 @@ export default function Dosier() {
   // Pricing definitions
   const fotomatonPrices: Record<string, number> = {
     none: 0,
-    "1h": 150,
-    "2h": 270,
-    "3h": 340,
+    '1h': 150,
+    '2h': 270,
+    '3h': 340,
   };
   const video360Prices: Record<string, number> = {
     none: 0,
-    "1h": 270,
-    "2h": 370,
-    "3h": 450,
+    '1h': 270,
+    '2h': 370,
+    '3h': 450,
   };
   const voguePrices: Record<string, number> = {
     none: 0,
@@ -49,9 +49,9 @@ export default function Dosier() {
     if (prePost) total += prePostPrice;
     if (
       neonExtra &&
-      (fotomatonHrs !== "none" ||
-        vogueOption.includes("1h") ||
-        vogueOption.includes("2h"))
+      (fotomatonHrs !== 'none' ||
+        vogueOption.includes('1h') ||
+        vogueOption.includes('2h'))
     ) {
       total += neonExtraPrice;
     }
@@ -69,7 +69,7 @@ export default function Dosier() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -84,7 +84,7 @@ export default function Dosier() {
       <header className="bg-[#faf8f5]/85 sticky top-0 z-50 flex items-center justify-between border-b border-gray-200/40 px-6 py-4 backdrop-blur-md transition-all md:px-12 lg:grid lg:grid-cols-3">
         <div className="flex items-center gap-3">
           <button
-            onClick={() => router.push("/")}
+            onClick={() => router.push('/')}
             className="group flex items-center gap-2 font-medium text-gray-700 transition-colors hover:text-[#c96f53]"
           >
             <svg
@@ -108,38 +108,38 @@ export default function Dosier() {
             src="/assets/images/logo26-2.png"
             alt="Coto Photo Logo"
             className="h-8 cursor-pointer object-contain md:h-10"
-            onClick={() => router.push("/")}
+            onClick={() => router.push('/')}
           />
         </div>
 
         {/* Navigation links for desktop */}
         <nav className="hidden items-center justify-center gap-8 text-sm font-semibold uppercase tracking-wider text-gray-600 lg:flex">
           <button
-            onClick={() => scrollToSection("quienes-somos")}
+            onClick={() => scrollToSection('quienes-somos')}
             className="whitespace-nowrap transition-colors hover:text-[#c96f53]"
           >
             Nosotros
           </button>
           <button
-            onClick={() => scrollToSection("servicios")}
+            onClick={() => scrollToSection('servicios')}
             className="whitespace-nowrap transition-colors hover:text-[#c96f53]"
           >
             Servicios
           </button>
           <button
-            onClick={() => scrollToSection("paso-a-paso")}
+            onClick={() => scrollToSection('paso-a-paso')}
             className="whitespace-nowrap transition-colors hover:text-[#c96f53]"
           >
             Paso a Paso
           </button>
           <button
-            onClick={() => scrollToSection("tarifas")}
+            onClick={() => scrollToSection('tarifas')}
             className="whitespace-nowrap transition-colors hover:text-[#c96f53]"
           >
             Calculadora
           </button>
           <button
-            onClick={() => scrollToSection("contacto")}
+            onClick={() => scrollToSection('contacto')}
             className="whitespace-nowrap transition-colors hover:text-[#c96f53]"
           >
             Contacto
@@ -178,13 +178,13 @@ export default function Dosier() {
         <ScrollReveal animation="fade-up" delay={600} duration={800}>
           <div className="my-10 flex justify-center gap-4">
             <button
-              onClick={() => scrollToSection("quienes-somos")}
+              onClick={() => scrollToSection('quienes-somos')}
               className="rounded-full bg-gray-900 px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all hover:bg-gray-800 hover:shadow-xl md:text-base"
             >
               Comenzar a explorar
             </button>
             <button
-              onClick={() => scrollToSection("tarifas")}
+              onClick={() => scrollToSection('tarifas')}
               className="rounded-full border border-gray-200/80 bg-white px-8 py-3.5 text-sm font-semibold text-gray-800 shadow-md transition-all hover:bg-gray-50 md:text-base"
             >
               Ver Tarifas
@@ -195,7 +195,7 @@ export default function Dosier() {
         {/* Scroll Indicator */}
         <div className="absolute bottom-[0.1rem] hidden animate-bounce sm:block">
           <button
-            onClick={() => scrollToSection("quienes-somos")}
+            onClick={() => scrollToSection('quienes-somos')}
             aria-label="Bajar"
           >
             <svg
@@ -290,34 +290,34 @@ export default function Dosier() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                id: "fotomaton",
-                title: "Fotomatón Clásico",
-                desc: "Diversión tradicional con impresiones instantáneas y álbum de recuerdos.",
-                img: "/assets/images/photo_call.webp",
+                id: 'fotomaton',
+                title: 'Fotomatón Clásico',
+                desc: 'Diversión tradicional con impresiones instantáneas y álbum de recuerdos.',
+                img: '/assets/images/photo_call.webp',
               },
               {
-                id: "video360",
-                title: "Plataforma Vídeo 360º",
-                desc: "Vídeos slow-motion dinámicos y cinematográficos listos por QR.",
-                img: "/assets/images/photo_booth.webp",
+                id: 'video360',
+                title: 'Plataforma Vídeo 360º',
+                desc: 'Vídeos slow-motion dinámicos y cinematográficos listos por QR.',
+                img: '/assets/images/photo_booth.webp',
               },
               {
-                id: "vogue",
-                title: "Photocall Revista VOGUE",
-                desc: "El photocall más elegante y glamuroso. Exclusivo de Coto Photo.",
-                img: "/assets/images/vogue_photocall.png",
+                id: 'vogue',
+                title: 'Photocall Revista VOGUE',
+                desc: 'El photocall más elegante y glamuroso. Exclusivo de Coto Photo.',
+                img: '/assets/images/vogue_photocall.png',
               },
               {
-                id: "audio-guestbook",
-                title: "Teléfono Audio Guestbook",
-                desc: "Libro de firmas sonoro. Guarda los mensajes y risas con su propia voz.",
-                img: "/assets/images/audiobook_2.webp",
+                id: 'audio-guestbook',
+                title: 'Teléfono Audio Guestbook',
+                desc: 'Libro de firmas sonoro. Guarda los mensajes y risas con su propia voz.',
+                img: '/assets/images/audiobook_2.webp',
               },
               {
-                id: "pre-post",
-                title: "Fotografía Pre & Post",
-                desc: "Capturas profesionales en la recepción impresas al instante en la barra.",
-                img: "/assets/images/pre_post.webp",
+                id: 'pre-post',
+                title: 'Fotografía Pre & Post',
+                desc: 'Capturas profesionales en la recepción impresas al instante en la barra.',
+                img: '/assets/images/pre_post.webp',
               },
             ].map((serv, index) => (
               <ScrollReveal
@@ -594,7 +594,7 @@ export default function Dosier() {
                     Dale un toque elegante y único a tu celebración con nuestro
                     Photocall VOGUE, el rincón perfecto para que tus invitados
                     se sientan protagonistas y se lleven recuerdos inolvidables.
-                    Este servicio es{" "}
+                    Este servicio es{' '}
                     <strong>
                       exclusivo de nuestra empresa dentro de la provincia
                     </strong>
@@ -846,29 +846,29 @@ export default function Dosier() {
 
             {[
               {
-                step: "01",
-                title: "Reserva",
-                desc: "Formalizamos la reserva tras definir fecha y lugar con una señal de 50€.",
+                step: '01',
+                title: 'Reserva',
+                desc: 'Formalizamos la reserva tras definir fecha y lugar con una señal de 50€.',
               },
               {
-                step: "02",
-                title: "Personalizar",
-                desc: "Reunión o llamada para adaptar marcos de fotos, música y efectos visuales.",
+                step: '02',
+                title: 'Personalizar',
+                desc: 'Reunión o llamada para adaptar marcos de fotos, música y efectos visuales.',
               },
               {
-                step: "03",
-                title: "Montaje",
-                desc: "Llegamos con antelación de sobra para montar y realizar pruebas de iluminación.",
+                step: '03',
+                title: 'Montaje',
+                desc: 'Llegamos con antelación de sobra para montar y realizar pruebas de iluminación.',
               },
               {
-                step: "04",
-                title: "Experiencia",
-                desc: "Técnicos calificados dinamizan la zona en todo momento durante el servicio.",
+                step: '04',
+                title: 'Experiencia',
+                desc: 'Técnicos calificados dinamizan la zona en todo momento durante el servicio.',
               },
               {
-                step: "05",
-                title: "Entrega",
-                desc: "Descargas instantáneas por código QR y envío digital completo a los novios.",
+                step: '05',
+                title: 'Entrega',
+                desc: 'Descargas instantáneas por código QR y envío digital completo a los novios.',
               },
             ].map((p, index) => (
               <ScrollReveal
@@ -995,8 +995,8 @@ export default function Dosier() {
                   <label
                     className={`flex cursor-pointer items-center justify-between rounded-2xl border p-4 transition-all ${
                       audioGuestbook
-                        ? "border-[#c96f53] bg-[#c96f53]/5 shadow-sm"
-                        : "border-gray-150/60 bg-white shadow-sm"
+                        ? 'border-[#c96f53] bg-[#c96f53]/5 shadow-sm'
+                        : 'border-gray-150/60 bg-white shadow-sm'
                     }`}
                   >
                     <div className="pr-2">
@@ -1019,8 +1019,8 @@ export default function Dosier() {
                   <label
                     className={`flex cursor-pointer items-center justify-between rounded-2xl border p-4 transition-all ${
                       prePost
-                        ? "border-[#c96f53] bg-[#c96f53]/5 shadow-sm"
-                        : "border-gray-150/60 bg-white shadow-sm"
+                        ? 'border-[#c96f53] bg-[#c96f53]/5 shadow-sm'
+                        : 'border-gray-150/60 bg-white shadow-sm'
                     }`}
                   >
                     <div className="pr-2">
@@ -1041,14 +1041,14 @@ export default function Dosier() {
                 </div>
 
                 {/* Extras Toggle (Conditional) */}
-                {(fotomatonHrs !== "none" ||
-                  vogueOption.includes("1h") ||
-                  vogueOption.includes("2h")) && (
+                {(fotomatonHrs !== 'none' ||
+                  vogueOption.includes('1h') ||
+                  vogueOption.includes('2h')) && (
                   <label
                     className={`flex cursor-pointer items-center justify-between rounded-2xl border p-4 transition-all ${
                       neonExtra
-                        ? "border-[#c96f53] bg-[#c96f53]/5 shadow-sm"
-                        : "border-gray-150/60 bg-white shadow-sm"
+                        ? 'border-[#c96f53] bg-[#c96f53]/5 shadow-sm'
+                        : 'border-gray-150/60 bg-white shadow-sm'
                     }`}
                   >
                     <div>
@@ -1088,7 +1088,7 @@ export default function Dosier() {
                 </p>
 
                 <button
-                  onClick={() => scrollToSection("contacto")}
+                  onClick={() => scrollToSection('contacto')}
                   className="mt-8 w-full rounded-xl bg-gray-900 py-3.5 text-sm font-semibold text-white shadow-md transition-colors hover:bg-gray-800 sm:text-base"
                 >
                   Reservar esta combinación
