@@ -1131,7 +1131,8 @@ export default function Dosier() {
                   Teléfono / WhatsApp
                 </span>
                 <a
-                  href="tel:+34665422051"
+                  href="https://wa.me/+34665422051"
+                  target="_blank" rel="noopener noreferrer"
                   className="text-base font-bold text-gray-900 transition-colors hover:text-[#c96f53] sm:text-lg"
                 >
                   665 422 051
